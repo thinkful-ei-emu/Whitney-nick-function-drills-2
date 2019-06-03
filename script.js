@@ -25,5 +25,28 @@ function beyond(num) {
     }
 }
 
+function decode(string) {
+    let newArray = string.split(' ');
+    let decodedSentence = [];
+
+    for(let i=0; i<newArray.length; i++) {
+      let firstLetter = newArray[i].charAt(0)
+      if(firstLetter === 'a') {
+        decodedSentence.push(newArray[i].slice(1, 2));
+      } else if(firstLetter === 'b') {
+        decodedSentence.push(newArray[i].slice(2, 3));
+        console.log(decodedSentence);
+      } else if(firstLetter === 'c') {
+        decodedSentence.push(newArray[i].slice(3, 4));
+      } else if(firstLetter === 'd') {
+        decodedSentence.push(newArray[i].slice(4, 5));
+      } else {decodedSentence.push(' ')}
+      
+    }
+    return decodedSentence.join().replace(/,/g, "");
+
+}
+decode('craft block argon meter bells brown croon droop');
+
 
 
