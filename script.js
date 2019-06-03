@@ -48,6 +48,8 @@ function decode(string) {
 }
 decode('craft block argon meter bells brown croon droop');
 
+//How many days in a month
+
 function daysInMonth(month, leapyear){
     switch(month){
         case 'September':
@@ -81,9 +83,24 @@ function daysInMonth(month, leapyear){
     } return result;
 }
 
+//Rock Paper Scissors
 
+function rockPaperScissors(num) {
+    // Generate computer number
+    // Compare computer number against param num
+    // Determine outcome
+    // If invalid throw error
+    // Rock = 1, Paper = 2, Scissors = 3
 
+    let compNum = Math.floor(Math.random() * 3) +1;
 
-
-
-
+    if(compNum === num) {
+        return `It is a tie!`
+    } else if( num === 1 && compNum === 3) {
+        return `You win!`
+    } else if(num === 2 && compNum === 1) {
+        return `You win!`
+    } else if(num === 3 && compNum === 2) {
+        return `You win!`
+    } else return `You lose!`
+}
